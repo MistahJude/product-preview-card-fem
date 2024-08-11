@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variables */
+:root {
+    /* color */
+    --color-primary: hsl(158, 36%, 37%);
+    --color-body: hsl(228, 12%, 48%);
+
+    /* font size */
+    --fs-body: .85rem;
+
+    /* margin */
+    --margin-body: 1.5rem;
+}
+
+/* Basic Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* utility */
+.text-body {
+    color: var(--color-body);
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+
+.text-heading {
+    font-family: 'Fraunces';
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+/* General */
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+    max-width: 900px;
+    width: 98%;
+    margin: 0 auto;
+}
+
+.product-container {
+    background-color: hsl(0, 0%, 100%);
+    margin: 10rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 1rem;
+}
+
+.product-image {
+    background-image: url(/images/image-product-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.product-info {
+    padding: 2rem;
+    padding-block: 3rem;
+}
+
+.product-category {
+    letter-spacing: .2rem;
+    font-size: var(--fs-body);
+}
+
+.product-title {
+    line-height: 2.5rem;
+    margin-top: var(--margin-body);
+    color: hsl(212, 21%, 14%);
+}
+
+.product-description {
+    line-height: 1.5rem;
+    margin-top: var(--margin-body);
+}
+
+.product-price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: var(--margin-body);
+}
+
+.product-price {
+    color: var(--color-primary);
+    margin-right: var(--margin-body);
+}
+
+.product-price__cancelled {
+    text-decoration-line: line-through;
+}
+
+.button {
+    background-color: var(--color-primary);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    margin-top: var(--margin-body);
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: var(--fs-body);
+    font-weight: 700;
+}
+
+.button:hover,
+.button:focus-visible {
+    background-color: hsl(158, 64%, 14%);
+}
